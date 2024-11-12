@@ -454,7 +454,7 @@ header {
 
 
 
-.footer {
+/* .footer {
     background: #111;
     color: var(--clr-accent);
     text-align: center;
@@ -479,15 +479,16 @@ header {
 
 .footer__link:hover {
     text-decoration: underline;
-}
+} */
 
 
-.social-list {
+/* .social-list {
     list-style: none;
     display: flex;
     justify-content: center;
     margin: 2em 0 0;
     padding: 0;
+    color: white;
 }
 
 .social-list__item {
@@ -496,7 +497,7 @@ header {
 
 .social-list__link {
     padding: .5em;
-}
+} */
 
 
 
@@ -513,3 +514,4 @@ header {
     margin-left: auto;
     margin-right: auto;
 }
+
