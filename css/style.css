@@ -167,6 +167,45 @@ figcaption {
     margin-top: 0.5rem;
 }
 
+code {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    background-color: var(--border-color);
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+pre {
+    background-color: var(--border-color);
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border: 1px solid var(--border-color);
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    font-size: 0.85em;
+    color: var(--text-color);
+}
+
+.note {
+    border-left: 4px solid var(--link-color);
+    padding: 0.5rem 1rem;
+    background-color: rgba(111, 177, 255, 0.1);
+    margin: 1.5rem 0;
+}
+
+.note h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: var(--link-color);
+}
+
 /* Print Styles */
 @media print {
     :root {

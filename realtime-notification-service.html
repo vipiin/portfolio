@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scalable Notification Service | Vipin Goriparthi</title>
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/style.css?v=1.0.2">
+    <link rel="icon" type="image/png" href="img/tux.png">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-container">
+                <div class="header-side header-left">
+                    <img src="img/tux.png" alt="Tux Penguin" width="120">
+                </div>
+                <div class="header-content">
+                    <h1>Vipin Goriparthi</h1>
+                    <nav>
+                        <a href="index.html">Home</a> |
+                        <a href="#tech-stack">Stack</a> |
+                        <a href="#architecture">Architecture</a> |
+                        <a href="mailto:vipin.wipen@gmail.com">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <hr>
+
+        <section id="project-overview">
+            <h2>Project: Scalable Distributed Notification System</h2>
+            <p><em>High-Performance Real-time Engine | Infrastructure & Distributed Systems</em></p>
+
+            <div class="note">
+                <h4>Interviewer Quick Pitch</h4>
+                <p>"I built a distributed notification system that solves the 'WebSocket Silo' problem. By using Redis
+                    Pub/Sub as a cross-instance message broker and Nginx with sticky sessions, I ensured that real-time
+                    updates reach users regardless of which server node they are connected to."</p>
+            </div>
+
+            <p>Traditional WebSockets work great on a single server, but they break when you scale horizontally. If User
+                A is on Server 1 and User B is on Server 2, they cannot communicate via standard in-memory sockets. This
+                project addresses that exact architectural bottleneck.</p>
+
+            <div class="project-links" style="margin: 1.5rem 0;">
+                <a href="https://p01--realtime-notfication-service--j5l6scymyf9r.code.run/" target="_blank"><strong>Live
+                        Demo</strong></a> |
+                <a href="https://github.com/vipiin" target="_blank"><strong>GitHub Code</strong></a>
+            </div>
+
+            <h3 id="tech-stack">Technical Architecture</h3>
+            <ul>
+                <li><strong>Core Engine</strong>: Java 17 / Spring Boot 3 / Spring Messaging.</li>
+                <li><strong>State Synchronization</strong>: <strong>Redis (Pub/Sub)</strong> – acts as the backbone for
+                    cross-server communication.</li>
+                <li><strong>Load Balancing</strong>: <strong>Nginx</strong> – configured with <code>ip_hash</code> for
+                    session persistence.</li>
+                <li><strong>Data Layer</strong>: PostgreSQL for persistent notification history.</li>
+                <li><strong>Deployment</strong>: Fully containerized using <strong>Docker</strong> and <strong>Docker
+                        Compose</strong>.</li>
+            </ul>
+
+            <h3 id="problem-solution">The Problem vs. The Solution</h3>
+            <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+                <tr style="border-bottom: 2px solid var(--border-color);">
+                    <th style="text-align: left; padding: 0.8rem 0.5rem;">The Challenge</th>
+                    <th style="text-align: left; padding: 0.8rem 0.5rem;">The Engineering Solution</th>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                    <td style="padding: 0.8rem 0.5rem; color: var(--sub-text); font-weight: bold;">WebSocket Silos</td>
+                    <td style="padding: 0.8rem 0.5rem;">Implemented <strong>Redis Pub/Sub</strong>. When a message hits
+                        any node, it's published to a Redis channel and all other nodes subscribe to deliver it locally.
+                    </td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                    <td style="padding: 0.8rem 0.5rem; color: var(--sub-text); font-weight: bold;">Handshake Failures
+                    </td>
+                    <td style="padding: 0.8rem 0.5rem;">Used <strong>Nginx Sticky Sessions</strong>
+                        (<code>ip_hash</code>). Prevents the HTTP-to-WS upgrade from failing by keeping the client on
+                        the same server during the handshake.</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                    <td style="padding: 0.8rem 0.5rem; color: var(--sub-text); font-weight: bold;">Concurrency</td>
+                    <td style="padding: 0.8rem 0.5rem;">Leveraged Spring's asynchronous message handling and
+                        event-driven architecture to support high concurrency.</td>
+                </tr>
+            </table>
+
+            <h3 id="deep-dive">Technical Deep Dive: Redis Synchronization</h3>
+            <p>To synchronize messages across nodes, each Spring Boot instance listens to a Redis channel. Here's a
+                simplified view of the synchronization logic:</p>
+            <pre><code>// On incoming message (Any Server)
+redisTemplate.convertAndSend("notification-topic", message);
+
+// Redis Listener (Every Server)
+public void onMessage(Message message) {
+    String payload = new String(message.getBody());
+    // Push to local WebSocket sessions
+    messagingTemplate.convertAndSend("/topic/notifications", payload);
+}</code></pre>
+
+            <h3 id="resume-points">Resume Highlights</h3>
+            <ul>
+                <li>Designed and implemented a <strong>distributed real-time notification engine</strong> using Spring
+                    Boot and WebSockets, supporting cross-instance message delivery via Redis Pub/Sub.</li>
+                <li>Architected the infrastructure using <strong>Nginx as a Load Balancer</strong> with sticky sessions
+                    (ip_hash) to ensure reliable WebSocket handshakes in a multi-node environment.</li>
+                <li>Optimized system performance using <strong>Docker Compose</strong> for orchestrated deployment of
+                    microservices, Redis, and PostgreSQL.</li>
+                <li>Reduced message delivery latency for distributed users from "not possible" to <strong>sub-50ms
+                        synchronization</strong> across the cluster.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <footer>
+            <p>
+                <a href="https://github.com/vipiin">GitHub</a> |
+                <a href="https://www.linkedin.com/in/vipin-goriparthi">LinkedIn</a> |
+                <a href="https://stackoverflow.com/users/14125600/vipin-wipen">StackOverflow</a>
+            </p>
+            <p>&copy; 2026 Vipin Goriparthi</p>
+        </footer>
+    </div>
+</body>
+
+</html>
