@@ -35,22 +35,31 @@
             <h2>Project: Scalable Distributed Notification System</h2>
             <p><em>High-Performance Real-time Engine | Infrastructure & Distributed Systems</em></p>
 
-            <div class="note">
-                <h4>Interviewer Quick Pitch</h4>
-                <p>"I built a distributed notification system that solves the 'WebSocket Silo' problem. By using Redis
-                    Pub/Sub as a cross-instance message broker and Nginx with sticky sessions, I ensured that real-time
-                    updates reach users regardless of which server node they are connected to."</p>
-            </div>
-
-            <p>Traditional WebSockets work great on a single server, but they break when you scale horizontally. If User
-                A is on Server 1 and User B is on Server 2, they cannot communicate via standard in-memory sockets. This
-                project addresses that exact architectural bottleneck.</p>
+            <p>This project was born out of a curiosity about how large-scale applications like WhatsApp or Slack handle
+                real-time updates when millions of users are spread across hundreds of servers. Traditional WebSockets
+                work great on a single server, but they "silo" users when scaled horizontally. If User A is on Server 1
+                and User B is on Server 2, they cannot communicate via standard in-memory sockets. This project
+                addresses that exact architectural bottleneck.</p>
 
             <div class="project-links" style="margin: 1.5rem 0;">
                 <a href="https://p01--realtime-notfication-service--j5l6scymyf9r.code.run/" target="_blank"><strong>Live
                         Demo</strong></a> |
                 <a href="https://github.com/vipiin" target="_blank"><strong>GitHub Code</strong></a>
             </div>
+
+            <h3 id="learnings">What I Learned & The Engineering Journey</h3>
+            <ul>
+                <li><strong>Distributed State Management</strong>: I learned that for systems to scale, no single server
+                    can be the source of truth for connection state. Using Redis Pub/Sub allowed me to treat the entire
+                    cluster as a single logical unit.</li>
+                <li><strong>Load Balancing Complexity</strong>: Dealing with the HTTP-to-WebSocket upgrade taught me the
+                    importance of Sticky Sessions. Without Nginx's <code>ip_hash</code>, the handshake would often fail
+                    as it hopped between different nodes.</li>
+                <li><strong>Network Latency</strong>: I optimized the message flow to ensure that even with the extra
+                    Redis hop, the end-to-end delivery remains under 50ms, providing a seamless user experience.</li>
+                <li><strong>Container Orchestration</strong>: Using Docker Compose to manage the interplay between
+                    Spring Boot, Redis, and Nginx was a great exercise in modern DevOps workflows.</li>
+            </ul>
 
             <h3 id="tech-stack">Technical Architecture</h3>
             <ul>
