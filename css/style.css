@@ -206,6 +206,42 @@ pre code {
     color: var(--link-color);
 }
 
+.contact-section {
+    margin-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-item span {
+    font-size: 0.75rem;
+    color: var(--sub-text);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+}
+
+.contact-item a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
 /* Print Styles */
 @media print {
     :root {
