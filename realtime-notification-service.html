@@ -22,8 +22,8 @@
                     <nav>
                         <a href="index.html">Home</a> |
                         <a href="#tech-stack">Stack</a> |
-                        <a href="#architecture">Architecture</a> |
-                        <a href="mailto:vipin.wipen@gmail.com">Contact</a>
+                        <a href="mailto:vipin.wipen@gmail.com">Contact</a> |
+                        <a href="Docs/DataScienceETPReport11914513pd.pdf" target="_blank">Resume</a>
                     </nav>
                 </div>
             </div>
@@ -103,17 +103,6 @@ public void onMessage(Message message) {
     messagingTemplate.convertAndSend("/topic/notifications", payload);
 }</code></pre>
 
-            <h3 id="resume-points">Resume Highlights</h3>
-            <ul>
-                <li>Designed and implemented a <strong>distributed real-time notification engine</strong> using Spring
-                    Boot and WebSockets, supporting cross-instance message delivery via Redis Pub/Sub.</li>
-                <li>Architected the infrastructure using <strong>Nginx as a Load Balancer</strong> with sticky sessions
-                    (ip_hash) to ensure reliable WebSocket handshakes in a multi-node environment.</li>
-                <li>Optimized system performance using <strong>Docker Compose</strong> for orchestrated deployment of
-                    microservices, Redis, and PostgreSQL.</li>
-                <li>Reduced message delivery latency for distributed users from "not possible" to <strong>sub-50ms
-                        synchronization</strong> across the cluster.</li>
-            </ul>
         </section>
 
         <hr>
