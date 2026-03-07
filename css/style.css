@@ -65,12 +65,14 @@ h4 {
 .container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 4rem 2rem;
+    padding: 2rem 2rem;
+    /* Reduced from 4rem */
 }
 
 /* Header & Navigation */
 header {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
+    /* Reduced from 4rem */
 }
 
 .header-container {
@@ -335,13 +337,12 @@ li {
 hr {
     border: 0;
     border-top: 1px solid var(--hr-color);
-    margin: 4rem 0;
+    margin: 2rem 0;
+    /* Reduced from 4rem */
 }
 
 footer {
-    text-align: left;
-    /* Changed from center to left/better alignment */
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     border-top: 1px solid var(--hr-color);
     display: flex;
     justify-content: space-between;
