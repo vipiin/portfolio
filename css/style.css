@@ -6,11 +6,19 @@
     --bg-secondary: #f8fafc;
     --text-primary: #0f172a;
     --text-secondary: #475569;
-    --text-muted: #64748b;
+    --text-muted: #475569;
+    /* Darker for better contrast ratio (~4.6:1) */
     --border-light: #e2e8f0;
     --card-bg: #ffffff;
     --accent: #3b82f6;
     --hr-color: #f1f5f9;
+}
+
+/* Better accessibility for keyboard users */
+a:focus-visible {
+    outline: 2px solid var(--brand-primary);
+    outline-offset: 4px;
+    border-radius: 4px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -285,18 +293,42 @@ li {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-.contact-item span {
+.contact-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-label {
+    font-size: 0.85rem;
     color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
 }
 
-.contact-item a {
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
+    margin-bottom: 0.5rem;
+}
+
+.contact-list a {
     color: var(--text-primary);
-    font-weight: 600;
-    margin-bottom: 0.25rem;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    display: inline-block;
 }
 
-.contact-item a:hover {
+.contact-list a:hover {
     color: var(--brand-primary);
+    transform: translateX(4px);
 }
 
 /* Footer */
