@@ -6,7 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vipin Goriparthi | Software Engineer</title>
     <meta name="color-scheme" content="light dark">
-    <link rel="stylesheet" href="css/style.css?v=1.0.2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=1.0.3">
     <link rel="icon" type="image/png" href="img/tux.png">
 </head>
 
@@ -15,17 +20,17 @@
         <header>
             <div class="header-container">
                 <div class="header-side header-left">
-                    <img src="img/tux.png" alt="Tux Penguin" width="120">
+                    <img src="img/tux.png" alt="Tux Penguin" width="100">
                 </div>
                 <div class="header-content">
                     <h1>Vipin Goriparthi</h1>
-                    <p>Software Engineer | +91-8688546099</p>
+                    <p class="subtitle">Software Engineer @ Aumovio (ex-Continental)</p>
                     <nav>
-                        <a href="#experience">Experience</a> |
-                        <a href="#skills">Skills</a> |
-                        <a href="#projects">Projects</a> |
-                        <a href="mailto:vipin.wipen@gmail.com">Contact</a> |
-                        <a href="Docs/DataScienceETPReport11914513pd.pdf" target="_blank">Resume</a>
+                        <a href="#experience">Experience</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#projects">Projects</a>
+                        <a href="mailto:vipin.wipen@gmail.com">Contact</a>
+                        <a href="Docs/DataScienceETPReport11914513pd.pdf" target="_blank" class="resume-link">Resume</a>
                     </nav>
                 </div>
             </div>
@@ -36,8 +41,11 @@
         <section id="experience">
             <h2>Experience</h2>
             <div class="experience__item">
-                <h3>Software Engineer - Continental Automotive Components (now Aumovio)</h3>
-                <p><em>Bengaluru, IN | Jul. 2023 – Present</em></p>
+                <div class="exp-header">
+                    <h3>Software Engineer - Continental Automotive Components (now Aumovio)</h3>
+                    <span class="date">Jul. 2023 – Present</span>
+                </div>
+                <p class="location"><em>Bengaluru, IN</em></p>
                 <ul>
                     <li><strong>Event-Driven Security Automation:</strong> Architected a system integrating Opsgenie
                         with Palo Alto Prisma Cloud via AWS Lambda, API Gateway, and SQS; engineered webhook pipelines
@@ -64,49 +72,80 @@
 
         <section id="skills">
             <h2>Technical Skills</h2>
-            <ul>
-                <li><strong>Programming:</strong> Java, JavaScript, Python, SQL</li>
-                <li><strong>Frameworks:</strong> Spring Boot, Spring Security, Angular 20, React, Node.js</li>
-                <li><strong>Cloud & DevOps:</strong> AWS (Lambda, ECS, SQS, API Gateway, EC2), Docker, GitLab CI/CD,
-                    Microservices</li>
-                <li><strong>Databases:</strong> PostgreSQL, MongoDB</li>
-                <li><strong>Tools:</strong> Git, Postman, RESTful APIs</li>
-            </ul>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <strong>Programming:</strong> Java, JavaScript, Python, SQL
+                </div>
+                <div class="skill-category">
+                    <strong>Frameworks:</strong> Spring Boot, Spring Security, Angular 20, React, Node.js
+                </div>
+                <div class="skill-category">
+                    <strong>Cloud & DevOps:</strong> AWS (Lambda, ECS, SQS, API Gateway), Docker, GitLab CI/CD
+                </div>
+                <div class="skill-category">
+                    <strong>Databases:</strong> PostgreSQL, MongoDB
+                </div>
+            </div>
         </section>
 
         <hr>
 
-        <h2>Projects</h2>
-        <ul>
-            <li>
-                <strong><a href="realtime-notification-service.html">Scalable Distributed Notification
-                        System</a></strong><br>
-                Real-time notification engine using Spring Boot, WebSockets, and Redis for distributed message
-                synchronization.
-            </li>
-            <li>
-                <strong><a href="book-social-network.html">Book Social Network</a></strong><br>
-                Full-stack platform with Angular 20, Spring Boot, and PostgreSQL (Supabase). Features JWT, Cloudinary,
-                and Brevo SMTP.
-            </li>
-            <li>
-                <strong><a href="employee-management.html">Employee Management System</a></strong><br>
-                CRUD application with Spring Boot and Angular 20, utilizing Neon serverless PostgreSQL and Render
-                deployment.
-            </li>
-            <li>
-                <strong><a href="task-manager.html">Task Manager App</a></strong><br>
-                Task management solution with MongoDB, Redux, and Firebase authentication.
-            </li>
-            <li>
-                <strong><a href="simpletwitter.html">Simple Twitter App</a></strong><br>
-                Developed a lightweight Twitter-style app with core features using Vanilla JavaScript.
-            </li>
-            <li>
-                <strong><a href="portfolio-item2.html">Online Cake Order App</a></strong><br>
-                Android application with order features and Firebase storage integration.
-            </li>
-        </ul>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Scalable Distributed Notification System</h3>
+                    <p>Real-time notification engine using Spring Boot, WebSockets, and Redis for distributed message
+                        synchronization.</p>
+                    <div class="project-links">
+                        <a href="realtime-notification-service.html" class="btn-detail">Case Study</a>
+                        <a href="https://p01--realtime-notfication-service--j5l6scymyf9r.code.run/" target="_blank"
+                            class="btn-live">Live Demo</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Book Social Network</h3>
+                    <p>Full-stack platform with Angular, Spring Boot, and PostgreSQL. Features JWT, Cloudinary, and
+                        Brevo SMTP.</p>
+                    <div class="project-links">
+                        <a href="book-social-network.html" class="btn-detail">Case Study</a>
+                        <a href="https://book-social-network-two.vercel.app/" target="_blank" class="btn-live">Live
+                            Demo</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Task Flow Tracker</h3>
+                    <p>Efficient task management solution with MongoDB, Redux, and Firebase authentication for seamless
+                        workflow.</p>
+                    <div class="project-links">
+                        <a href="task-manager.html" class="btn-detail">Case Study</a>
+                        <a href="https://task-flow-tracker-delta.vercel.app/" target="_blank" class="btn-live">Live
+                            Demo</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Employee Management System</h3>
+                    <p>Robust CRUD application with Spring Boot and Angular, utilizing Neon serverless PostgreSQL and
+                        Render.</p>
+                    <div class="project-links">
+                        <a href="employee-management.html" class="btn-detail">Case Study</a>
+                        <a href="https://vipiin.github.io/employee_logs/" target="_blank" class="btn-live">Live Demo</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Simple Twitter App</h3>
+                    <p>Lightweight social interaction platform with core features developed using Vanilla JavaScript.
+                    </p>
+                    <div class="project-links">
+                        <a href="simpletwitter.html" class="btn-detail">Case Study</a>
+                        <a href="https://vipiin.github.io/SimpleTwitter/" target="_blank" class="btn-live">Live Demo</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <hr>
@@ -160,7 +199,8 @@
         </section>
 
         <footer>
-            <p>&copy; 2023-2026 Vipin Goriparthi &bull; Built with minimal HTML/CSS</p>
+            <p>&copy; 2023-2026 Vipin Goriparthi</p>
+            <p>Crafted with Passion & Code</p>
         </footer>
     </div>
 </body>
