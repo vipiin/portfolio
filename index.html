@@ -42,18 +42,28 @@
             <h2>Experience</h2>
             <div class="experience__item">
                 <div class="exp-header">
-                    <h3>Software Engineer @ Aumovio (ex-Continental)</h3>
-                    <span class="date">2023 – Present</span>
+                    <h3>Software Engineer - Continental Automotive Components (now Aumovio)</h3>
+                    <span class="date">Jul. 2023 – Present</span>
                 </div>
+                <p class="location"><em>Bengaluru, IN</em></p>
                 <ul>
-                    <li><strong>Security Automation:</strong> Architected AWS-based event pipelines (Lambda, SQS,
-                        Opsgenie), reducing manual triage by <strong>85%</strong> and incident response time from hours
-                        to <5 mins.</li>
-                    <li><strong>DevOps & Reliability:</strong> Engineered GitLab CI/CD pipelines and resolved critical
-                        memory/latency issues, cutting deployment times by <strong>60%</strong> with zero-downtime
-                        releases.</li>
-                    <li><strong>Full-Stack Security:</strong> Designed real-time threat visualization dashboards using
-                        Spring Boot, MongoDB, and React/Redux for high-scale production systems.</li>
+                    <li><strong>Event-Driven Security Automation:</strong> Architected a system integrating Opsgenie
+                        with Palo Alto Prisma Cloud via AWS Lambda, API Gateway, and SQS; engineered webhook pipelines
+                        with custom field mappings that reduced manual triage time by 85%.</li>
+                    <li><strong>Real-time Incident Response:</strong> Reduced critical incident response time from hours
+                        to under 5 minutes by deploying serverless alert workflows processing 1000+ daily events;
+                        implemented monitoring solutions using Spring Boot and AWS ECS.</li>
+                    <li><strong>CI/CD & DevOps:</strong> Engineered GitLab CI/CD pipelines with custom YAML for Spring
+                        Boot microservices and Docker, cutting deployment time by 60% and enabling zero-downtime
+                        releases for VDO Fleet production systems.</li>
+                    <li><strong>Security Dashboards:</strong> Designed and implemented RESTful APIs using Spring Boot,
+                        AWS Lambda, and API Gateway; integrated with MongoDB and React/Redux frontend for real-time
+                        threat visualization.</li>
+                    <li><strong>Production Reliability:</strong> Resolved critical incidents in VDO Fleet through root
+                        cause analysis, implementing permanent fixes for memory leaks and API latency issues in
+                        Java-based microservices.</li>
+                    <li><strong>Technical Stack:</strong> Java, Spring Boot, JavaScript, Node.js, React, Redux, MongoDB,
+                        AWS (Lambda, ECS, SQS, API Gateway), Docker, GitLab CI/CD</li>
                 </ul>
             </div>
         </section>
@@ -61,19 +71,31 @@
         <hr>
 
         <section id="skills">
-            <h2>Core Stack</h2>
+            <h2>Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <strong>Backend</strong>
-                    Java (Spring Boot), Node.js, Redis, PostgreSQL, MongoDB, JWT
+                    <strong>Languages</strong>
+                    Java, TypeScript, JavaScript (ES6+), Python, SQL
                 </div>
                 <div class="skill-category">
-                    <strong>Frontend</strong>
-                    Angular, React, TypeScript, Redux, Vanilla JS
+                    <strong>Backend & Security</strong>
+                    Spring Boot, Spring Security, Node.js, JWT, RESTful APIs, WebSockets
                 </div>
                 <div class="skill-category">
-                    <strong>Infrastructure</strong>
-                    AWS (Lambda, ECS, SQS), Docker, GitHub/GitLab CI, Nginx
+                    <strong>Frontend & State</strong>
+                    Angular, React, Redux, Vanilla JS, HTML5/CSS3
+                </div>
+                <div class="skill-category">
+                    <strong>Cloud & Infrastructure</strong>
+                    AWS (Lambda, ECS, SQS, API Gateway), Docker, Redis, Nginx, Firebase
+                </div>
+                <div class="skill-category">
+                    <strong>Databases & Storage</strong>
+                    PostgreSQL (Supabase/Neon), MongoDB, Redis, LocalStorage
+                </div>
+                <div class="skill-category">
+                    <strong>DevOps & Tools</strong>
+                    GitLab CI/CD, Git, Postman, Cloudinary, Brevo SMTP, Opsgenie
                 </div>
             </div>
         </section>
@@ -81,42 +103,58 @@
         <hr>
 
         <section id="projects">
-            <h2>Featured Projects</h2>
+            <h2>Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <h3>Notification Service</h3>
-                    <p>High-performance engine for cross-server WebSocket message synchronization via Redis.</p>
+                    <h3>Scalable Distributed Notification System</h3>
+                    <p>Real-time notification engine using Spring Boot, WebSockets, and Redis for distributed message
+                        synchronization.</p>
                     <div class="project-links">
                         <a href="realtime-notification-service.html" class="btn-detail">Case Study</a>
                         <a href="https://p01--realtime-notfication-service--j5l6scymyf9r.code.run/" target="_blank"
-                            class="btn-live">Live</a>
+                            class="btn-live">Live Demo</a>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <h3>Book Social Network</h3>
-                    <p>Full-stack Angular/Spring platform featuring JWT auth and automated email services.</p>
+                    <p>Full-stack platform with Angular, Spring Boot, and PostgreSQL. Features JWT, Cloudinary, and
+                        Brevo SMTP.</p>
                     <div class="project-links">
                         <a href="book-social-network.html" class="btn-detail">Case Study</a>
-                        <a href="https://book-social-network-two.vercel.app/" target="_blank" class="btn-live">Live</a>
+                        <a href="https://book-social-network-two.vercel.app/" target="_blank" class="btn-live">Live
+                            Demo</a>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <h3>Task Flow Tracker</h3>
-                    <p>MERN production tool with Redux state management and Firebase authentication.</p>
+                    <p>Efficient task management solution with MongoDB, Redux, and Firebase authentication for seamless
+                        workflow.</p>
                     <div class="project-links">
                         <a href="task-manager.html" class="btn-detail">Case Study</a>
-                        <a href="https://task-flow-tracker-delta.vercel.app/" target="_blank" class="btn-live">Live</a>
+                        <a href="https://task-flow-tracker-delta.vercel.app/" target="_blank" class="btn-live">Live
+                            Demo</a>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <h3>Employee Management</h3>
-                    <p>Robust CRUD portal utilizing Neon serverless PostgreSQL and reactive frontend patterns.</p>
+                    <h3>Employee Management System</h3>
+                    <p>Robust CRUD application with Spring Boot and Angular, utilizing Neon serverless PostgreSQL and
+                        Render.</p>
                     <div class="project-links">
                         <a href="employee-management.html" class="btn-detail">Case Study</a>
-                        <a href="https://vipiin.github.io/employee_logs/" target="_blank" class="btn-live">Live</a>
+                        <a href="https://vipiin.github.io/employee_logs/" target="_blank" class="btn-live">Live Demo</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Simple Twitter App</h3>
+                    <p>Lightweight social interaction platform with core features developed using Vanilla JavaScript.
+                    </p>
+                    <div class="project-links">
+                        <a href="simpletwitter.html" class="btn-detail">Case Study</a>
+                        <a href="https://vipiin.github.io/SimpleTwitter/" target="_blank" class="btn-live">Live Demo</a>
                     </div>
                 </div>
             </div>
@@ -126,51 +164,51 @@
 
         <section id="education">
             <h2>Education</h2>
-            <div class="exp-header">
-                <h3>B.Tech, Information Technology</h3>
-                <span class="date">2023</span>
-            </div>
-            <p>Lovely Professional University &bull; <em>CGPA: 8.22</em></p>
+            <ul>
+                <li><strong>B.Tech in Information Technology</strong> - Lovely Professional University, Punjab (2023)
+                    <br><em>CGPA: 8.22 | Coursework: DSA, DBMS, OS, Cloud Computing, Computer Networks</em>
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="achievements">
+            <h2>Achievements</h2>
+            <ul>
+                <li>Implemented serverless architecture processing 1000+ daily security events with 99.9% reliability.
+                </li>
+                <li>4-star HackerRank (Java, Python, SQL)</li>
+            </ul>
         </section>
 
         <hr>
 
         <section id="contact" class="contact-section" aria-label="Contact Information">
             <h2>Get in Touch</h2>
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <h3 class="contact-label">Email</h3>
-                    <ul class="contact-list">
-                        <li><a href="mailto:vipin.wipen@gmail.com"
-                                aria-label="Send an email to vipin.wipen@gmail.com">vipin.wipen@gmail.com</a></li>
-                    </ul>
+            <div class="contact-compact">
+                <div class="contact-group">
+                    <span class="contact-category">Email</span>
+                    <a href="mailto:vipin.wipen@gmail.com" aria-label="Email me">vipin.wipen@gmail.com</a>
                 </div>
-                <div class="contact-item">
-                    <h3 class="contact-label">Professional</h3>
-                    <ul class="contact-list">
-                        <li><a href="https://www.linkedin.com/in/vipin-goriparthi" target="_blank"
-                                rel="noopener">LinkedIn</a></li>
-                        <li><a href="https://github.com/vipiin" target="_blank" rel="noopener">GitHub</a></li>
-                    </ul>
+                <div class="contact-group">
+                    <span class="contact-category">Professional</span>
+                    <div class="contact-links">
+                        <a href="https://www.linkedin.com/in/vipin-goriparthi" target="_blank"
+                            rel="noopener">LinkedIn</a>
+                        <a href="https://github.com/vipiin" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://stackoverflow.com/users/14125600/vipin-wipen" target="_blank"
+                            rel="noopener">StackOverflow</a>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <h3 class="contact-label">Community</h3>
-                    <ul class="contact-list">
-                        <li><a href="https://stackoverflow.com/users/14125600/vipin-wipen" target="_blank"
-                                rel="noopener">StackOverflow</a></li>
-                        <li><a href="https://www.kaggle.com/vipingoriparthi" target="_blank" rel="noopener">Kaggle</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="contact-item">
-                    <h3 class="contact-label">Social & Others</h3>
-                    <ul class="contact-list">
-                        <li><a href="https://twitter.com/VipinWipen" target="_blank" rel="noopener">Twitter</a></li>
-                        <li><a href="https://trailblazer.me/id/vgoriparthi5" target="_blank" rel="noopener">Salesforce
-                                Portfolio</a></li>
-                        <li><a href="https://www.duolingo.com/profile/Viipin" target="_blank"
-                                rel="noopener">Duolingo</a></li>
-                    </ul>
+                <div class="contact-group">
+                    <span class="contact-category">Social & Others</span>
+                    <div class="contact-links">
+                        <a href="https://www.kaggle.com/vipingoriparthi" target="_blank" rel="noopener">Kaggle</a>
+                        <a href="https://twitter.com/VipinWipen" target="_blank" rel="noopener">Twitter</a>
+                        <a href="https://trailblazer.me/id/vgoriparthi5" target="_blank" rel="noopener">Salesforce</a>
+                        <a href="https://www.duolingo.com/profile/Viipin" target="_blank" rel="noopener">Duolingo</a>
+                    </div>
                 </div>
             </div>
         </section>
