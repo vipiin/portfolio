@@ -16,7 +16,7 @@ class SiteHeader extends HTMLElement {
                             <a href="index.html#experience">Experience</a>
                             <a href="index.html#projects">Projects</a>
                             <a href="index.html#contact">Contact</a>
-                            <a href="https://drive.google.com/file/d/14y5nMmOFsjow6JfYEG-VFNzeWrq-0Vv0/view?usp=sharing" target="_blank" class="resume-link">Resume</a>
+                            <a href="https://drive.google.com/file/d/1VfL96Sg9BjWJdEKGFwGJP6Ja_8SnMF72/view?usp=sharing" target="_blank" class="resume-link">Resume</a>
                         </nav>
                     </div>
                 </div>
